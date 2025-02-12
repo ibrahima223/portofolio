@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Définir les variables racines pour les couleurs */
+:root{
+    --bg-color: #f2f2fc;
+    --bg-color-1: #fdf9ff;
+    --bg-color-2: #e8dfec;
+    --text-bg-color:#302e4d;
+    --text-bg-color-700:#504e70;
+    --skin-color: #ec1839;
+}
+
+/* Réinitialiser la marge et le padding pour le corps, définir la hauteur de ligne et la taille de police */
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Réinitialiser la marge, le padding, le contour, la décoration du texte et définir la taille de la boîte pour tous les éléments */
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Assurer que les pseudo-éléments utilisent la taille de boîte border-box */
+::before, ::after{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+.section{
+    background: var(--bg-color-2);
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 1;
+
+}
+/* partie aside */
+.aside{
+    width: 270px;
+    background: var(--bg-color-1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--bg-color-2);
+    padding: 30px;
+    z-index: 10;
+    height: 100%;
+}
+.aside .logo{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.aside .logo a{
+    color: var(--text-bg-color);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+.aside .logo a span{
+    font-family: 'Clicker Script', cursive;
+    font-family: 40px;
+}
+
+.aside .logo a ::before
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+.aside .logo a ::after
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 10px;
+}
+
+.aside .nav{
+    margin-top: 50px;
+}
+
+.aside .nav-toggle{
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-color-2);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-color-1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside .nav-toggle span{
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+
+.aside .nav-toggle span::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    top: -6px;
+    left: 0;
+}
+
+.aside .nav-toggle span::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    top: 6px;
+    left: 0;
+}
+.aside .nav li{
+    margin-bottom: 20px;
+    display: block;
+}
+.aside .nav li a{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-color-2);
+    color: var(--text-bg-color);
+    padding: 5px 15px;
+}
+
+.aside .nav li a.active{
+    color: var(--skin-color);
+}
+
+.aside .nav li a i{
+    margin-right: 15px;
+}
